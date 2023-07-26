@@ -124,8 +124,6 @@ If you like this project... Give it a Star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-UI design was created by Nelson Sakwa and can be found on Behance.
-
 I would like to thank to the Microverse team for the learning opportunity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
