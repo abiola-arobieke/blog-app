@@ -28,9 +28,6 @@ RSpec.describe User, type: :model do
     it 'should return the most recent post' do
       first_user = User.create(name: 'Mary', posts_counter: 0)
 
-      initial_post = Post.create(author: first_user, title: 'My first post', text: 'first post', comments_counter: 0,
-                                 likes_counter: 0, created_at: 'Fri, 28 Jul 2023 09:51:46')
-
       second_post = Post.create(author: first_user, title: 'My second post', text: 'second post',
                                 comments_counter: 0, likes_counter: 0, created_at: 'Fri, 28 Jul 2023 09:53:46')
 
