@@ -132,6 +132,4 @@ I would like to thank to the Microverse team for the learning opportunity
 
 This project is [MIT](./LICENSE.md) licensed.
 
-UI design was created by Original design idea by 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
