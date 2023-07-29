@@ -6,6 +6,14 @@ RSpec.describe Like, type: :model do
 
   subject { Like.create(author: user, post:) }
 
+  context '#validation' do
+    it 'should validate_uniqueness(:author_id)' do
+      second_user = User.create(name: 'David', posts_counter: 0)
+      second_like = Like.create(author: second_user, post:)
+      expect(second_like.author_id).not_to eql(subject.author_id)
+    end
+  end
+
   context 'check associations between author and post' do
     it 'should belong to an author' do
       expect(subject.author).to eq(user)
