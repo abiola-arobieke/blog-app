@@ -8,6 +8,13 @@ RSpec.describe Comment, type: :model do
 
   subject { Comment.create(author: user, post:, text: 'I love the post') }
 
+  context '#validation' do
+    it 'should validate_presence_of(:text)' do
+      subject.text = nil
+      expect(subject).to_not be_valid
+    end
+  end
+
   context 'check association between comment and user' do
     it 'should belong to the post' do
       expect(subject.post).to eq(post)
