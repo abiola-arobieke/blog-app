@@ -49,8 +49,13 @@ RSpec.describe Post, type: :model do
     end
   end
 
-  context 'check the length of the character' do
-    it 'should not be not be more than 250 character' do
+  context '#validation' do
+    it 'should validate_presence_of(:title)' do
+      subject.title = nil
+      expect(subject).to_not be_valid
+    end
+
+    it 'should validate_length_of(:title).is_at_most(250) ' do
       subject.title = 'a' * 250
       expect(subject).to be_valid
 
@@ -58,8 +63,13 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should not be empty' do
-      subject.title = nil
+    it 'should validate_integer(:omments_counter)' do
+      subject.comments_counter = 1.5
+      expect(subject).to_not be_valid
+    end
+
+    it 'should validate_integer_greater_than_zero(:omments_counter)' do
+      subject.comments_counter = -1
       expect(subject).to_not be_valid
     end
 
