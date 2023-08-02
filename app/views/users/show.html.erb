@@ -1,0 +1,24 @@
+<h1>Welcome sir</h1>
+<div>
+      <%= image_tag @user.photo %>
+</div>
+<div>
+  <h1><%= @user.name %></h1>
+  <p>Number of posts: <%= @user.posts_counter || 0 %></p>
+</div>
+</div>
+<ul>
+  <% @user.posts.each do |post| %>
+    <%= link_to user_posts_path(@user.id, @post) do %>
+    <li>
+      <h3><%= post.title %></h3>
+      <h4><%= post.text %></h4>
+      <div>
+        <p>Comments: <%= post.comments_counter %> | Likes: <%= post.likes_counter %></p>
+      </div>
+    </li>
+    <% end %>
+  <% end %>
+</ul>
+
+
