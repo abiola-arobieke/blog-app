@@ -47,7 +47,7 @@ describe 'Users', type: :request do
     end
 
     describe 'GET/show' do
-      it 'shows details for a given post' do
+      it 'shows details for a particular post' do
         get "/users/#{user1.id}/posts/#{post2.id}"
         expect(response).to have_http_status(:success)
         expect(response).to be_successful
