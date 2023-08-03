@@ -1,0 +1,13 @@
+<main>
+    <div>
+        <div>
+        <h3>
+            Post Number <%= @post.id %> by <%= @post.author.name %></h3>
+        <div>
+            <p> Comments: <%= @post.comments_counter %> - Likes: <%= @post.likes_counter %></p>
+        </div>
+        </div>
+        <p><%= @post.text %></p>
+    </div>
+    </div>
+</main>
