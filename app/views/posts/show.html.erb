@@ -16,7 +16,7 @@
         <div class="p-1 wrap">
             <h3>Comments:</h3>
             <ul>
-            <% if @post.comments.any? %>
+            <% if @post.recent_comments.any? %>
                 <% @post.comments.each do |comment| %>
                 <li class="bg">
                     <p><%=comment.author.name %> : <%=comment.text %></p>
