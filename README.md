@@ -10,7 +10,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
@@ -42,12 +41,6 @@
 - **Create a blog listing and detail page**
 - **Create user listing page**
 - **Use migration file to build a schema**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](Comming Soon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
