@@ -1,0 +1,10 @@
+.user-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+}
+
+.wrap {
+  border: 2px solid #ccc;
+  margin-bottom: 1rem;
+}
