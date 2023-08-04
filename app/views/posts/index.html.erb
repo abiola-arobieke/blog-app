@@ -1,5 +1,4 @@
 <main>
-  # user data and numbers of post
   <section>
     <div class="d-flex">
       <div class="user-image wrap">
@@ -11,7 +10,6 @@
       </div>
     </div>
   <section />
-  # posts and comments
   <section>
     <ul>
     <% @posts.includes(:author, :comments, comments: :author).each_with_index do |post, index| %>
