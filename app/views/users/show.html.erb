@@ -1,5 +1,4 @@
 <main>
-  # user data
   <section>
     <div class="d-flex">
       <div class="user-image wrap">
@@ -11,17 +10,15 @@
       </div>
     </div>
   <section />
-  # biography section
   <section class="bio">
     <div class="p-1 wrap">
       <h3>Bio</h3>
       <p> <%= @user.bio %> </p>
     </div>
   </section>
-  # post section
   <section>
     <ul>
-      <% @user.posts.limit(2).each_with_index do |post, index| %>
+      <% @user.most_recent_posts.each_with_index do |post, index| %>
         <%= link_to user_post_path(@user.id, post.id) do %>
         <li class="flex p-1 wrap bg">
         <div>Post #<%= index + 1 %>
@@ -34,7 +31,6 @@
         <% end %>
       <% end %>
     </ul>
-
     <%if @user.posts.length > 2 %>
       <div class="d-flex center">
         <%= link_to "See all posts", user_posts_path(@user.id), class: "btn" %>
