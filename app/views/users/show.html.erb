@@ -1,24 +1,44 @@
-<h1>Welcome sir</h1>
-<div>
-      <%= image_tag @user.photo %>
-</div>
-<div>
-  <h1><%= @user.name %></h1>
-  <p>Number of posts: <%= @user.posts_counter || 0 %></p>
-</div>
-</div>
-<ul>
-  <% @user.posts.each do |post| %>
-    <%= link_to user_posts_path(@user.id, @post) do %>
-    <li>
-      <h3><%= post.title %></h3>
-      <h4><%= post.text %></h4>
-      <div>
-        <p>Comments: <%= post.comments_counter %> | Likes: <%= post.likes_counter %></p>
+<main>
+  <section>
+    <div class="d-flex">
+      <div class="user-image wrap">
+        <%= image_tag @user.photo, class: 'list_image', alt: 'photo'%>
       </div>
-    </li>
+      <div class="d-flex spc-btw m-100 f-end p-1 wrap">
+        <h2><%= @user.name %></h2>
+        <p class="m-50">Number of posts: <%= @user.posts_counter || 0 %></p>
+      </div>
+    </div>
+  <section />
+  <section class="bio">
+    <div class="p-1 wrap">
+      <h3>Bio</h3>
+      <p> <%= @user.bio %> </p>
+    </div>
+  </section>
+  <section>
+    <ul>
+      <% @user.most_recent_posts.each_with_index do |post, index| %>
+        <%= link_to user_post_path(@user.id, post.id) do %>
+        <li class="flex p-1 wrap bg">
+        <div>Post #<%= index + 1 %>
+          <h3><%= post.title %></h3>
+          <p><%= post.text %></p>
+          <div class="d-flex right">
+            <p>Comments: <%= post.comments_counter || 0 %> | Likes: <%= post.likes_counter || 0 %></p>
+          </div>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <%if @user.posts.length > 2 %>
+      <div class="d-flex center">
+        <%= link_to "See all posts", user_posts_path(@user.id), class: "btn" %>
+      <div>
     <% end %>
-  <% end %>
-</ul>
+  </section>
+</main>
+
+
 
 
