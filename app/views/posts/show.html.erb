@@ -12,6 +12,14 @@
         <div>
             <p><%= @post.text %> </p>
         </div>
+        <div>
+
+        <div class="d-flex m-100 col-gap-3 mb-1">
+           <%= link_to 'Add a comment', new_user_post_comment_path(@post.author.id, @post.id), class: "btn" %>
+           <%= form_with(url: user_post_likes_path(@post.author, @post), method: :post) do |form| %>
+            <%= form.submit 'Like', class: "btn"%>
+          <% end %>
+        </div>
 
         <div class="p-1 wrap">
             <h3>Comments:</h3>
