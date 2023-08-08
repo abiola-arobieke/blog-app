@@ -35,10 +35,15 @@ ul {
 
 .btn {
   background-color: #1c1818ed;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   text-align: center;
   margin-top: 1rem;
   color: #fff;
+}
+
+.form-title,
+textarea {
+  padding: 12px 5px;
 }
 
 .list_image {
@@ -67,6 +72,18 @@ ul {
   width: 50%;
 }
 
+.m-1 {
+  margin-top: 10rem;
+}
+
+.mt-1 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 3rem;
+}
+
 .f-end {
   align-items: flex-end;
 }
@@ -87,6 +104,10 @@ ul {
   padding: 1rem;
 }
 
+.p-2 {
+  padding: 2rem;
+}
+
 .bg {
   background-color: #fff;
 }
@@ -97,4 +118,12 @@ ul {
 
 .column {
   flex-direction: column;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+.col-gap-3 {
+  gap: 16px;
 }

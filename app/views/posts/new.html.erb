@@ -1,0 +1,12 @@
+<main>
+  <h2 class="d-flex center">Create a Post</h2>
+  <div class="middle m-50 p-2 wrap">
+    <%= form_with(model: @post, url: user_posts_path, class:"d-flex column col-gap-3 ") do |form| %>
+      <%= form.label :title %>
+      <%= form.text_field :title, required: true, class:"form-title" %>
+      <%= form.label :text %>
+      <%= form.text_area :text, size: "5x10", required: true %>
+      <%= form.submit 'Create Post', class: "btn middle" %>
+    <% end %>
+  </div>
+</main>
