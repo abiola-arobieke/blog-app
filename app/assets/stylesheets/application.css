@@ -127,3 +127,7 @@ textarea {
 .col-gap-3 {
   gap: 16px;
 }
+
+.commentator {
+  font-size: 12px;
+}
