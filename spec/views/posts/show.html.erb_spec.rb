@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.feature 'Post show page', type: :feature do
   before do
-    @first_user = User.create(name: 'Frank Lebron', bio: 'The first post from frank',
+    @first_user = User.create(name: 'Sameed Mohsin', bio: 'The first post from frank',
                               photo: 'https://avatars.githubusercontent.com/u/114492335?v=4',
                               posts_counter: 2)
     @second_user = User.create(name: 'Barber John', bio: 'Barber is a football player',
@@ -40,7 +40,7 @@ RSpec.feature 'Post show page', type: :feature do
   end
 
   scenario 'should show post author name' do
-    expect(page).to have_content('Frank Lebron')
+    expect(page).to have_content('Sameed Mohsin')
   end
 
   scenario 'should show number of comments for the post' do
@@ -57,7 +57,7 @@ RSpec.feature 'Post show page', type: :feature do
 
   scenario 'should show user name of each comment' do
     within('.bg') do
-      expect(page).to have_content('Frank Lebron')
+      expect(page).to have_content('Sameed Mohsin')
       expect(page).to have_content('Barber John')
       expect(page).to have_content('Akeem Fauzi')
     end
