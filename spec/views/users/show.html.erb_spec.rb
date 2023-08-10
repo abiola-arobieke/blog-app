@@ -27,6 +27,10 @@ RSpec.feature 'User show page', type: :feature do
     expect(page).to have_content('The first post from Frank')
   end
 
+  scenario 'should show the number of post for a user' do
+    expect(page).to have_content('Number of posts: 4')
+  end
+
   scenario 'should show three most recent user posts' do
     expect(page).to have_content('My fourth content')
     expect(page).to have_content('The third content')
