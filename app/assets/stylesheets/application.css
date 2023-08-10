@@ -44,6 +44,8 @@ ul {
 .form-title,
 textarea {
   padding: 12px 5px;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .list_image {
@@ -70,6 +72,10 @@ textarea {
 
 .m-50 {
   width: 50%;
+}
+
+.m-33 {
+  width: 33%;
 }
 
 .m-1 {
@@ -128,6 +134,18 @@ textarea {
   gap: 16px;
 }
 
+.col-gap-1 {
+  gap: 8px;
+}
+
 .commentator {
   font-size: 12px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
 }
