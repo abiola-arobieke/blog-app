@@ -1,0 +1,23 @@
+<h2 class="d-flex center">Log in</h2>
+
+<div class="middle m-33 p-2 wrap">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "d-flex column col-gap-3") do |f| %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-title" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class:"form-title" %>
+    </div>
+
+    <div class="actions m-100 txt-center">
+      <%= f.submit "Log in", class: "btn middle" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="d-flex center p-1 column m-50 middle">
+<%= render "devise/shared/links" %>
+</div>
