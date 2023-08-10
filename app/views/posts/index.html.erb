@@ -13,15 +13,16 @@
   <section>
     <ul>
     <% @posts.includes(:author, :comments, comments: :author).each_with_index do |post, index| %>
-      <%= link_to user_post_path(user_id: post.author.id, id: post.id) do %>
+      
       <li class="flex p-1 bg wrap">
       <div>Post #<%= index + 1 %>
+      <%= link_to user_post_path(user_id: post.author.id, id: post.id) do %>
         <h3><%= post.title %></h3>
         <p><%= post.text %></p>
         <div class="d-flex right">
           <p>Comments: <%= post.comments_counter || 0 %> | Likes: <%= post.likes_counter || 0 %></p>
         </div>
-
+      <% end %>
         <div class="p-1 wrap">
           <h3>Comments:</h3>
           <ul>
@@ -38,8 +39,7 @@
             <% end %>
           </ul>
         </div>
-      </li>
-      <% end %>
+      </li>  
     <% end %>
     </ul>
   <section>
