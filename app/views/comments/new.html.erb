@@ -1,0 +1,11 @@
+<%= form_with(model: @comment, url: user_post_comments_path(@post.author, @post)) do |form|%>
+    <div class="d-flex column f-center p-2 wrap m-50 middle">
+      <h2>Add a Comment</h2>
+      <div class="m-100">
+        <%= form.text_area :text, size: "5x10", class: "m-100", required: true %>
+      </div>
+        <div>
+            <%= form.submit 'Submit', class: "btn mt-1" %>
+        </div>
+    </div>
+<% end %>
