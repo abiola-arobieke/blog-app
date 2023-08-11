@@ -98,6 +98,12 @@ Then, run the following command to start the app
 - Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
 - LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
+👤 **Javed Shahbaz**
+
+- GitHub: [@Javed-Shahbaz](https://github.com/Javed-Shahbaz)
+- Twitter: [@javedshahbaz007](https://twitter.com/javedshahbaz007)
+- LinkedIn: [@javedshahbaz](https://www.linkedin.com/in/javedshahbaz/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
