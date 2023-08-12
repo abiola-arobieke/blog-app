@@ -10,4 +10,21 @@ Rails.application.routes.draw do
       resources :likes, only: [:create]
     end
   end
+
+  resources :users, only: [] do
+    member do
+      get 'api_token'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:index, :show] do
+        resources :posts, only: [:index, :show, :new, :create] do
+          resources :comments, only: [:index, :new, :create]
+          resources :likes, only: [:create]
+        end
+      end
+    end
+  end
 end

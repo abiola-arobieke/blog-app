@@ -14,6 +14,8 @@
     <div class="txt-center m-100 middle">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+      <%= link_to("logout", destroy_user_session_path, method: :delete, class: "btn") if current_user.present? %>
+      <%= link_to "get your token", api_token_user_path(current_user), class: "btn" if current_user.present? %>
     <%= yield %>
     </div>
   </body>
