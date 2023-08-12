@@ -77,3 +77,5 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rails-controller-testing'
 
 gem 'devise'
+
+gem 'active_model_serializers', '~> 0.10.13'
