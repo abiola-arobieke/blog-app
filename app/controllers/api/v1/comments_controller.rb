@@ -19,7 +19,6 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
-
   private
 
   def load_comments

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.json { render json: @user.api_token, status: :ok }
-      format.html {}
+      format.html { render :api_token }
     end
   end
 
